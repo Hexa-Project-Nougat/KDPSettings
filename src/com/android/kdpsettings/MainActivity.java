@@ -33,6 +33,8 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.android.kdpsettings.R;
+import com.android.kdpsettings.fragments.KangDroidAnimSettings;
+import com.android.kdpsettings.fragments.KangDroidRecentsSettings;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -129,11 +131,11 @@ public class MainActivity extends FragmentActivity implements
 			switch(position) {
 				case 0:
 					// this is just to show it compiles
-					return new KangDroidTestFragment();
+					return new KangDroidAnimSettings();
 				case 1:
 					return new KangDroidRecentsSettings();
 				case 2:
-					return new KangDroidTestFragment();
+					return new KangDroidAnimSettings();
 			}
 			// getItem is called to instantiate the fragment for the given page.
 			// Return a DummySectionFragment (defined as a static inner class
@@ -167,208 +169,5 @@ public class MainActivity extends FragmentActivity implements
 	}
 
 	//Starting of Fragment Activity(TabActivity) Classes. I can't do separated cuz I don't have any time to doit.
-
-	public static class KangDroidTestFragment extends PreferenceFragment implements Preference.OnPreferenceChangeListener {
-		/**
-		 * The fragment argument representing the section number for this
-		 * fragment.
-		 */
-		private static final String ARG_SECTION_NUMBER = "section_number";
-		
-		private static final String TAG = "KangDroidAnimSettings";
-	
-		private static final String KEY_TOAST_ANIMATION = "toast_animation";
-	    private static final String KEY_LISTVIEW_ANIMATION = "listview_animation";
-	    private static final String KEY_LISTVIEW_INTERPOLATOR = "listview_interpolator";
-	    private static final String SCROLLINGCACHE_PREF = "pref_scrollingcache";
-	    private static final String SCROLLINGCACHE_PERSIST_PROP = "persist.sys.scrollingcache";
-	    private static final String SCROLLINGCACHE_DEFAULT = "1";
-	
-		private Context mContext;
-	
-		private ListPreference mToastAnimation;
-	    private ListPreference mListViewAnimation;
-	    private ListPreference mListViewInterpolator;
-		private ListPreference mScrollingCachePref;
-
-		public KangDroidTestFragment() {
-		}
-
-		/**
-		 * Returns a new instance of this fragment for the given section
-		 * number.
-		 */
-		public static KangDroidTestFragment newInstance(int sectionNumber) {
-			KangDroidTestFragment fragment = new KangDroidTestFragment();
-			Bundle args = new Bundle();
-			args.putInt(ARG_SECTION_NUMBER, sectionNumber);
-			fragment.setArguments(args);
-			return fragment;
-		}
-
-		@Override
-		public void onCreate(Bundle savedInstanceState)
-		{
-			super.onCreate(savedInstanceState);
-			
-	        addPreferencesFromResource(R.xml.kangdroid_anim_settings);
-			PreferenceScreen prefSet = getPreferenceScreen();
-	        ContentResolver resolver = getActivity().getContentResolver();
-
-	        mContext = getActivity().getApplicationContext();
-
-	        // Toast Animations
-	        mToastAnimation = (ListPreference) findPreference(KEY_TOAST_ANIMATION);
-	        mToastAnimation.setSummary(mToastAnimation.getEntry());
-	        int CurrentToastAnimation = Settings.System.getInt(resolver,
-	                Settings.System.TOAST_ANIMATION, 1);
-	        mToastAnimation.setValueIndex(CurrentToastAnimation); //set to index of default value
-	        mToastAnimation.setSummary(mToastAnimation.getEntries()[CurrentToastAnimation]);
-	        mToastAnimation.setOnPreferenceChangeListener(this);
-		
-	        // List view animation
-	        mListViewAnimation = (ListPreference) findPreference(KEY_LISTVIEW_ANIMATION);
-	        int listviewanimation = Settings.System.getInt(resolver,
-	                Settings.System.LISTVIEW_ANIMATION, 0);
-	        mListViewAnimation.setValue(String.valueOf(listviewanimation));
-	        mListViewAnimation.setSummary(mListViewAnimation.getEntry());
-	        mListViewAnimation.setOnPreferenceChangeListener(this);
-
-	        mListViewInterpolator = (ListPreference) findPreference(KEY_LISTVIEW_INTERPOLATOR);
-	        int listviewinterpolator = Settings.System.getInt(resolver,
-	                Settings.System.LISTVIEW_INTERPOLATOR, 0);
-	        mListViewInterpolator.setValue(String.valueOf(listviewinterpolator));
-	        mListViewInterpolator.setSummary(mListViewInterpolator.getEntry());
-	        mListViewInterpolator.setOnPreferenceChangeListener(this);
-	        mListViewInterpolator.setEnabled(listviewanimation > 0);
-		
-	        // Scrolling cache
-	        mScrollingCachePref = (ListPreference) prefSet.findPreference(SCROLLINGCACHE_PREF);
-	        mScrollingCachePref.setValue(SystemProperties.get(SCROLLINGCACHE_PERSIST_PROP,
-	                SystemProperties.get(SCROLLINGCACHE_PERSIST_PROP, SCROLLINGCACHE_DEFAULT)));
-	        mScrollingCachePref.setOnPreferenceChangeListener(this);
-		}
-		
-	    @Override
-	    public void onResume() {
-	        super.onResume();
-	    }
-	
-	    public boolean onPreferenceChange(Preference preference, Object objValue) {
-	        final String key = preference.getKey();
-			ContentResolver resolver = getActivity().getContentResolver();
-	        if (preference == mToastAnimation) {
-	            int index = mToastAnimation.findIndexOfValue((String) objValue);
-	            Settings.System.putString(resolver, Settings.System.TOAST_ANIMATION, (String) objValue);
-	            mToastAnimation.setSummary(mToastAnimation.getEntries()[index]);
-	            Toast.makeText(mContext, "Toast Test", Toast.LENGTH_SHORT).show();
-	            return true;
-	        }
-	        if (KEY_LISTVIEW_ANIMATION.equals(key)) {
-	            int value = Integer.parseInt((String) objValue);
-	            int index = mListViewAnimation.findIndexOfValue((String) objValue);
-	            Settings.System.putInt(resolver,
-	                    Settings.System.LISTVIEW_ANIMATION,
-	                    value);
-	            mListViewAnimation.setSummary(mListViewAnimation.getEntries()[index]);
-	            mListViewInterpolator.setEnabled(value > 0);
-	        }
-	        if (KEY_LISTVIEW_INTERPOLATOR.equals(key)) {
-	            int value = Integer.parseInt((String) objValue);
-	            int index = mListViewInterpolator.findIndexOfValue((String) objValue);
-	            Settings.System.putInt(resolver,
-	                    Settings.System.LISTVIEW_INTERPOLATOR,
-	                    value);
-	            mListViewInterpolator.setSummary(mListViewInterpolator.getEntries()[index]);
-	        }
-	        if (preference == mScrollingCachePref) {
-	            if (objValue != null) {
-	                SystemProperties.set(SCROLLINGCACHE_PERSIST_PROP, (String)objValue);
-	            return true;
-	            }
-	        }
-	        return false;
-	   }
-	}
-	
-	public static class KangDroidRecentsSettings extends PreferenceFragment implements Preference.OnPreferenceChangeListener {
-		/**
-		 * The fragment argument representing the section number for this
-		 * fragment.
-		 */
-		private static final String ARG_SECTION_NUMBER = "section_number";
-		
-		private static final String TAG = "KangDroidRecentsSettings";
-		
-	    private static final String IMMERSIVE_RECENTS = "immersive_recents";
-		private static final String RECENTS_CLEAR_ALL_LOCATION = "recents_clear_all_location";
-
-	    private ListPreference mImmersiveRecents;
-		private SwitchPreference mRecentsClearAll;
-		private ListPreference mRecentsClearAllLocation;
-
-		public KangDroidRecentsSettings() {
-		}
-
-		/**
-		 * Returns a new instance of this fragment for the given section
-		 * number.
-		 */
-		public static KangDroidRecentsSettings newInstance(int sectionNumber) {
-			KangDroidRecentsSettings fragment = new KangDroidRecentsSettings();
-			Bundle args = new Bundle();
-			args.putInt(ARG_SECTION_NUMBER, sectionNumber);
-			fragment.setArguments(args);
-			return fragment;
-		}
-
-		@Override
-		public void onCreate(Bundle savedInstanceState)
-		{
-			super.onCreate(savedInstanceState);
-			
-	        addPreferencesFromResource(R.xml.kangdroid_recents_settings);
-		
-			final ContentResolver resolver = getActivity().getContentResolver();
-		
-	        mImmersiveRecents = (ListPreference) findPreference(IMMERSIVE_RECENTS);
-	        mImmersiveRecents.setValue(String.valueOf(Settings.System.getInt(
-	                resolver, Settings.System.RECENTS_FULL_SCREEN, 0)));
-	        mImmersiveRecents.setSummary(mImmersiveRecents.getEntry());
-	        mImmersiveRecents.setOnPreferenceChangeListener(this);
-		
-	        // clear all location
-	        mRecentsClearAllLocation = (ListPreference) findPreference(RECENTS_CLEAR_ALL_LOCATION);
-	        int location = Settings.System.getIntForUser(resolver,
-	                Settings.System.RECENTS_CLEAR_ALL_LOCATION, 3, UserHandle.USER_CURRENT);
-	        mRecentsClearAllLocation.setValue(String.valueOf(location));
-	        mRecentsClearAllLocation.setSummary(mRecentsClearAllLocation.getEntry());
-	        mRecentsClearAllLocation.setOnPreferenceChangeListener(this);
-		}
-		
-	    @Override
-	    public void onResume() {
-	        super.onResume();
-	    }
-	
-	    public boolean onPreferenceChange(Preference preference, Object newValue) {
-	        ContentResolver resolver = getActivity().getContentResolver();
-	        if (preference == mImmersiveRecents) {
-	            Settings.System.putInt(resolver, Settings.System.RECENTS_FULL_SCREEN,
-	                    Integer.valueOf((String) newValue));
-	            mImmersiveRecents.setValue(String.valueOf(newValue));
-	            mImmersiveRecents.setSummary(mImmersiveRecents.getEntry());
-	            return true;
-	        } else if (preference == mRecentsClearAllLocation) {
-	            int location = Integer.valueOf((String) newValue);
-	            int index = mRecentsClearAllLocation.findIndexOfValue((String) newValue);
-	            Settings.System.putIntForUser(resolver,
-	                    Settings.System.RECENTS_CLEAR_ALL_LOCATION, location, UserHandle.USER_CURRENT);
-	            mRecentsClearAllLocation.setSummary(mRecentsClearAllLocation.getEntries()[index]);
-	            return true;
-	        }
-	        return false;
-	   }
-	}
 
 }
