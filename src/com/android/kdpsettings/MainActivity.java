@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.preference.Preference;
 import android.preference.PreferenceFragment;
 import android.app.Fragment;
 import android.app.FragmentManager;
@@ -152,7 +153,7 @@ public class MainActivity extends FragmentActivity implements
 
 	//Starting of Fragment Activity(TabActivity) Classes. I can't do separated cuz I don't have any time to doit.
 
-	public static class KangDroidTestFragment extends PreferenceFragment {
+	public static class KangDroidTestFragment extends PreferenceFragment implements Preference.OnPreferenceChangeListener {
 		/**
 		 * The fragment argument representing the section number for this
 		 * fragment.
@@ -180,6 +181,15 @@ public class MainActivity extends FragmentActivity implements
 			super.onCreate(savedInstanceState);
 			addPreferencesFromResource(R.xml.settings_test);
 		}
+		
+	    @Override
+	    public void onResume() {
+	        super.onResume();
+	    }
+	
+	    public boolean onPreferenceChange(Preference preference, Object objValue) {
+	        return false;
+	    }
 	}
 
 }
