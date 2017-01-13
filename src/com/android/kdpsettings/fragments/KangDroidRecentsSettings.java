@@ -39,16 +39,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class KangDroidRecentsSettings extends PreferenceFragment implements Preference.OnPreferenceChangeListener {
-	/**
-	 * The fragment argument representing the section number for this
-	 * fragment.
-	 */
-	private static final String ARG_SECTION_NUMBER = "section_number";
 	
 	private static final String TAG = "KangDroidRecentsSettings";
 	
     private static final String IMMERSIVE_RECENTS = "immersive_recents";
 	private static final String RECENTS_CLEAR_ALL_LOCATION = "recents_clear_all_location";
+	
+	/**
+	 * The fragment argument representing the section number for this
+	 * fragment.
+	 */
+	private static final String ARG_SECTION_NUMBER = "section_number";
 
     private ListPreference mImmersiveRecents;
 	private SwitchPreference mRecentsClearAll;

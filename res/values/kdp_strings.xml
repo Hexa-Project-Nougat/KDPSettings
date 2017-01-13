@@ -938,4 +938,12 @@
     <string name="powermenu_title">Power Menu</string>
     <string name="quicksettings_title">Quick Settings</string>
 
+    <string name="menu_delete">Delete APN</string>
+    <!-- APNs screen menu option to create a brand spanking new APN -->
+    <string name="menu_new">New APN</string>
+    <!-- Edit access point screen menu option to save the user's changes for this APN to the persistent storage -->
+    <string name="menu_save">Save</string>
+    <!-- Edit access point screen menu option to discard the user's changes for this APN -->
+    <string name="menu_cancel">Discard</string>
+
 </resources>
