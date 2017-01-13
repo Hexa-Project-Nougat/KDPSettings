@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.os.SystemProperties;
+import android.os.UserHandle;
 import android.app.Activity;
 import android.widget.Toast;
 import android.net.Uri;
@@ -32,6 +33,9 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.android.kdpsettings.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends FragmentActivity implements
 		ActionBar.TabListener {
@@ -127,7 +131,7 @@ public class MainActivity extends FragmentActivity implements
 					// this is just to show it compiles
 					return new KangDroidTestFragment();
 				case 1:
-					return new KangDroidTestFragment();
+					return new KangDroidRecentsSettings();
 				case 2:
 					return new KangDroidTestFragment();
 			}
@@ -282,6 +286,86 @@ public class MainActivity extends FragmentActivity implements
 	                SystemProperties.set(SCROLLINGCACHE_PERSIST_PROP, (String)objValue);
 	            return true;
 	            }
+	        }
+	        return false;
+	   }
+	}
+	
+	public static class KangDroidRecentsSettings extends PreferenceFragment implements Preference.OnPreferenceChangeListener {
+		/**
+		 * The fragment argument representing the section number for this
+		 * fragment.
+		 */
+		private static final String ARG_SECTION_NUMBER = "section_number";
+		
+		private static final String TAG = "KangDroidRecentsSettings";
+		
+	    private static final String IMMERSIVE_RECENTS = "immersive_recents";
+		private static final String RECENTS_CLEAR_ALL_LOCATION = "recents_clear_all_location";
+
+	    private ListPreference mImmersiveRecents;
+		private SwitchPreference mRecentsClearAll;
+		private ListPreference mRecentsClearAllLocation;
+
+		public KangDroidRecentsSettings() {
+		}
+
+		/**
+		 * Returns a new instance of this fragment for the given section
+		 * number.
+		 */
+		public static KangDroidRecentsSettings newInstance(int sectionNumber) {
+			KangDroidRecentsSettings fragment = new KangDroidRecentsSettings();
+			Bundle args = new Bundle();
+			args.putInt(ARG_SECTION_NUMBER, sectionNumber);
+			fragment.setArguments(args);
+			return fragment;
+		}
+
+		@Override
+		public void onCreate(Bundle savedInstanceState)
+		{
+			super.onCreate(savedInstanceState);
+			
+	        addPreferencesFromResource(R.xml.kangdroid_recents_settings);
+		
+			final ContentResolver resolver = getActivity().getContentResolver();
+		
+	        mImmersiveRecents = (ListPreference) findPreference(IMMERSIVE_RECENTS);
+	        mImmersiveRecents.setValue(String.valueOf(Settings.System.getInt(
+	                resolver, Settings.System.RECENTS_FULL_SCREEN, 0)));
+	        mImmersiveRecents.setSummary(mImmersiveRecents.getEntry());
+	        mImmersiveRecents.setOnPreferenceChangeListener(this);
+		
+	        // clear all location
+	        mRecentsClearAllLocation = (ListPreference) findPreference(RECENTS_CLEAR_ALL_LOCATION);
+	        int location = Settings.System.getIntForUser(resolver,
+	                Settings.System.RECENTS_CLEAR_ALL_LOCATION, 3, UserHandle.USER_CURRENT);
+	        mRecentsClearAllLocation.setValue(String.valueOf(location));
+	        mRecentsClearAllLocation.setSummary(mRecentsClearAllLocation.getEntry());
+	        mRecentsClearAllLocation.setOnPreferenceChangeListener(this);
+		}
+		
+	    @Override
+	    public void onResume() {
+	        super.onResume();
+	    }
+	
+	    public boolean onPreferenceChange(Preference preference, Object newValue) {
+	        ContentResolver resolver = getActivity().getContentResolver();
+	        if (preference == mImmersiveRecents) {
+	            Settings.System.putInt(resolver, Settings.System.RECENTS_FULL_SCREEN,
+	                    Integer.valueOf((String) newValue));
+	            mImmersiveRecents.setValue(String.valueOf(newValue));
+	            mImmersiveRecents.setSummary(mImmersiveRecents.getEntry());
+	            return true;
+	        } else if (preference == mRecentsClearAllLocation) {
+	            int location = Integer.valueOf((String) newValue);
+	            int index = mRecentsClearAllLocation.findIndexOfValue((String) newValue);
+	            Settings.System.putIntForUser(resolver,
+	                    Settings.System.RECENTS_CLEAR_ALL_LOCATION, location, UserHandle.USER_CURRENT);
+	            mRecentsClearAllLocation.setSummary(mRecentsClearAllLocation.getEntries()[index]);
+	            return true;
 	        }
 	        return false;
 	   }
