@@ -1,0 +1,941 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+	
+	<!-- KDP Default strings -->
+	<string name="hexa_title">Hexa Customizations</string>
+    <string name="ok">OK</string>
+    <string name="loading">Loading\u2026</string>
+    <string name="dlg_ok">OK</string>
+    <string name="cancel">Cancel</string>
+	<string name="dlg_reset_values_message">Reset values to Default?</string>
+    <string name="reset_paranoid">Paranoid</string>
+    <string name="reset_android">Android</string>
+	<string name="disabled">Disabled</string>
+	
+    <!-- About phone screen, KDP version -->
+    <string name="kdp_version_title">HEXA ROM Version</string>
+    <!-- Do NOT translate this -->
+    <string name="kdp_version_default">Alpha - 1</string>
+	
+    <!-- Color Picker -->
+    <string name="dialog_color_picker">Color Picker</string>
+    <string name="press_color_to_apply">Press on color below to apply</string>
+    <string name="arrow_right">→</string>
+    <string name="arrow_down">↓</string>
+    <string name="hex">Hex:</string>
+    <string name="hex_hint">#ff000000</string>
+    <string name="set">Set</string>
+    <string name="color_default">Default</string>
+	<string name="reset">Reset</string>
+	<string name="default_string">Default</string>
+	<string name="reset_message">Reset</string>
+	<string name="attention">Attention</string>
+	
+    <!-- About device screen, CPU and RAM info. -->
+    <string name="cpu_info">CPU</string>
+    <string name="mem_info">RAM</string>
+	
+    <!--Status bar date -->
+	<string name="kdp_status_bar_clock_and_date">Clock &amp; Date Settings</string>
+    <string name="status_bar_clock_category">Clock</string>
+    <string name="status_bar_date_title">Date</string>
+    <string name="status_bar_date_none">Hidden (default)</string>
+    <string name="status_bar_date_small">Small</string>
+    <string name="status_bar_date_normal">Normal</string>
+    <string name="status_bar_date_format_title">Date format</string>
+    <string name="status_bar_date_style">Date style</string>
+    <string name="status_bar_date_style_normal">Normal</string>
+    <string name="status_bar_date_style_lowercase">Lowercase</string>
+    <string name="status_bar_date_style_uppercase">Uppercase</string>
+    <string name="status_bar_date_format_custom">Custom java format</string>
+    <string name="status_bar_date_string_edittext_title">Must be in DateFormat eg. MM/dd/yy</string>
+    <string name="status_bar_date_string_edittext_summary">Enter string</string>
+	
+    <!-- Status bar - Clock -->
+    <string name="clock_color_title">Color</string>
+    <string name="status_bar_clock_style_reset">Reset color</string>
+    <string name="status_bar_clock_style_reset_message">Reset clock color?</string>
+    <string name="clock_font_style_title">Font</string>
+    <string name="clock_font_normal">Normal</string>
+    <string name="clock_font_italic">Italic</string>
+    <string name="clock_font_bold">Bold</string>
+    <string name="clock_font_bold_italic">Bold Italic</string>
+    <string name="clock_font_light">Light</string>
+    <string name="clock_font_light_italic">Light Italic</string>
+    <string name="clock_font_thin">Thin</string>
+    <string name="clock_font_thin_italic">Thin Italic</string>
+    <string name="clock_font_condensed">Condensed</string>
+    <string name="clock_font_condensed_italic">Condensed Italic</string>
+    <string name="clock_font_condensed_bold">Condensed Bold</string>
+    <string name="clock_font_condensed_bold_italic">Condensed Bold Italic</string>
+    <string name="clock_font_medium">Medium</string>
+    <string name="clock_font_medium_italic">Medium Italic</string>
+	<string name="clock_font_size_title">Font size</string>
+    <string name="clock_font_size_4">4</string>
+    <string name="clock_font_size_5">5</string>
+    <string name="clock_font_size_6">6</string>
+    <string name="clock_font_size_7">7</string>
+    <string name="clock_font_size_8">8</string>
+    <string name="clock_font_size_9">9</string>
+    <string name="clock_font_size_10">10</string>
+    <string name="clock_font_size_11">11</string>
+    <string name="clock_font_size_12">12</string>
+    <string name="clock_font_size_13">13</string>
+    <string name="clock_font_size_14">14</string>
+    <string name="clock_font_size_15">15</string>
+    <string name="clock_font_size_16">16</string>
+    <string name="clock_font_size_17">17</string>
+    <string name="clock_font_size_18">18</string>
+    <string name="clock_font_size_19">19</string>
+    <string name="clock_font_size_20">20</string>
+    <string name="clock_font_size_21">21</string>
+    <string name="clock_font_size_22">22</string>
+    <string name="clock_font_size_23">23</string>
+	
+    <!-- Show carrier label and custom -->
+    <string name="carrier_options">Carrier Label</string>
+    <string name="custom_carrier_label_title">Custom carrier label</string>
+    <string name="custom_carrier_label_explain">Please enter a new label. Leave blank to revert to stock label.</string>
+    <string name="custom_carrier_label_notset">Custom label currently not set</string>
+    <string name="status_bar_carrier_color">Carrier label color</string>
+	<string name="status_bar_carrier_size">Carrier label text size</string>
+    <string name="show_carrier_title">Carrier label</string>
+    <string name="show_carrier_disabled">Disabled</string>
+    <string name="show_carrier_keyguard">Keyguard carrier</string>
+    <string name="show_carrier_statusbar">Status bar carrier</string>
+    <string name="show_carrier_enabled">Enabled</string>
+	
+    <!-- Gesture Anywhere -->
+    <string name="gesture_anywhere_title">Gesture Anywhere</string>
+    <string name="gesture_anywhere_enabled_title">Gesture Anywhere</string>
+    <string name="gesture_anywhere_enabled_summary">Enable the Gesture Anywhere feature</string>
+    <string name="gesture_anywhere_position_title">Loction</string>
+    <string name="gesture_anywhere_position_left">Left edge</string>
+    <string name="gesture_anywhere_position_right">Right edge</string>
+    <string name="gesture_anywhere_gestures_title">Gestures</string>
+    <string name="gesture_anywhere_gestures_summary">Add, remove, and edit gestures</string>
+    <!-- Label, button used to add a gesture -->
+    <string name="ga_button_add">Add gesture</string>
+    <!-- Label, button used to reload all gestures -->
+    <string name="ga_button_reload">Reload</string>
+    <!-- Label, button used to cancel the operation of adding a gesture -->
+    <string name="ga_button_discard">Discard</string>
+    <!-- Label, button used to save a gesture newly created -->
+    <string name="ga_button_done">Done</string>
+    <!-- Label, prompt asking the user to enter the name of the gesture -->
+    <string name="ga_prompt_gesture_name">Name</string>
+    <!-- Error message, informs the user he needs to enter a name before saving a gesture -->
+    <string name="ga_error_missing_name">You must enter a name</string>
+    <!-- success message, tells the user where the gesture was saved -->
+    <string name="ga_save_success">Gesture saved in %s</string>
+    <!-- Buttons in Rename gesture dialog box -->
+    <string name="ga_rename_action">OK</string>
+    <!-- Buttons in Rename gesture dialog box -->
+    <string name="ga_cancel_action">Cancel</string>
+    <!-- Message displayed when the user opens the gestures settings screen -->
+    <string name="ga_gestures_loading">Loading gestures...</string>
+    <!-- Message displayed when the user has no gestures -->
+    <string name="ga_gestures_empty">No gestures</string>
+    <!-- Title of the screen used to view/manage gestures -->
+    <string name="ga_gestures_activity">Gestures</string>
+    <!-- Noun, menu item used to edit a gesture -->
+    <string name="ga_gestures_edit">Edit</string>
+    <!-- Noun, menu item used to remove a gesture -->
+    <string name="ga_gestures_delete">Delete</string>
+    <!-- Message displayed when a gesture is successfully deleted -->
+    <string name="ga_gestures_delete_success">Gesture deleted</string>
+    <!-- Title of dialog box -->
+    <string name="ga_gestures_rename_title">Rename gesture</string>
+    <!-- Label of gesture name field in Rename gesture dialog box -->
+    <string name="ga_gestures_rename_label">Gesture name</string>
+    <!-- Message, displayed when the sdcard cannot be found, 1st parameter is the name of the file that stores the gestures.  CHAR LIMIT=80 -->
+    <string name="ga_gestures_error_loading">Could not load %s. Make sure you have storage available.</string>
+    <string name="trigger_category">Trigger region</string>
+    <string name="trigger_width_title">Trigger width</string>
+    <string name="trigger_width_summary">Adjust the width of the trigger area</string>
+    <string name="trigger_top_title">Trigger position</string>
+    <string name="trigger_top_summary">Adjust the vertical postion of the trigger area</string>
+    <string name="trigger_bottom_title">Trigger height</string>
+    <string name="trigger_bottom_summary">Adjust the height of the trigger area</string>
+    <string name="picker_activities">Activities</string>
+    <string name="select_custom_app_title">Select custom app</string>
+    <string name="select_custom_activity_title">Select custom activity</string>
+    <string name="profile_applist_title">Applications</string>
+	
+    <!-- Restart SystemUI -->
+    <string name="restart_systemui">Restart SystemUI</string>
+
+    <!-- Network traffic -->
+    <string name="network_traffic_title">Network traffic</string>
+    <string name="show_network_traffic_state">Status bar traffic monitor</string>
+    <string name="network_traffic_summary">Enable various network traffic options in statusbar</string>
+    <string name="show_network_traffic_unit">Display unit</string>
+    <string name="show_network_traffic_frequency">Update interval</string>
+    <string name="show_network_traffic_disable">Disabled</string>
+    <string name="show_network_traffic_up">Outgoing</string>
+    <string name="show_network_traffic_down">Incoming</string>
+    <string name="show_network_traffic_all">Outgoing and incoming</string>
+    <string name="show_network_traffic_bit">Bits per second</string>
+    <string name="show_network_traffic_byte">Bytes per second</string>
+    <string name="show_network_traffic_500">500 ms</string>
+    <string name="show_network_traffic_1000">1000 ms</string>
+    <string name="show_network_traffic_1500">1500 ms</string>
+    <string name="show_network_traffic_2000">2000 ms</string>
+    <string name="network_traffic_autohide">Auto hide</string>
+    <string name="network_traffic_autohide_summary">Hide the traffic monitor when there is no activity</string>
+    <string name="network_traffic_autohide_threshold">Inactivity threshold</string>
+    <string name="network_traffic_color_style">Color style</string>
+    <string name="network_traffic_color_reset">Reset color</string>
+    <string name="network_traffic_color_reset_message">Reset network traffic color to default?</string>
+	
+    <!-- Toast Animation -->
+     <string name="toast_animation_title">Toast animation</string>
+     <string name="toast_none_animation">None</string>
+     <string name="toast_default_animation">Default</string>
+     <string name="toast_fade_animation">Fade</string>
+     <string name="toast_SlideRight_animation">Slide right</string>
+     <string name="toast_SlideLeft_animation">Slide left</string>
+     <string name="toast_Xylon_animation">Xylon</string>
+     <string name="toast_Toko_animation">Toko</string>
+     <string name="toast_Tn_animation">Tn</string>
+     <string name="toast_Honami_animation">Honami</string>
+     <string name="toast_FastFade_animation">Fast fade</string>
+     <string name="toast_GrowFade_animation">Grow fade</string>
+     <string name="toast_GrowFadeCenter_animation">Grow fade center</string>
+     <string name="toast_GrowFadeBottom_animation">Grow fade bottom</string>
+     <string name="toast_Translucent_animation">Translucent</string>
+     <string name="toast_SlideLeftRight_animation">Slide left to right</string>
+     <string name="toast_SlideRightLeft_animation">Slide right to left</string>
+
+    <!-- ListView animation -->
+    <string name="interface_settings_animation_title">Animation options</string>
+    <string name="listview_animation_title">ListView animation</string>
+    <string name="listview_off">Default</string>
+    <string name="listview_wave_left">Wave (left)</string>
+    <string name="listview_wave_right">Wave (right)</string>
+    <string name="listview_alpha">Alpha</string>
+    <string name="listview_scale">Scale</string>
+    <string name="listview_stack_top">Stack (top)</string>
+    <string name="listview_stack_bottom">Stack (bottom)</string>
+    <string name="listview_unfold">Unfold</string>
+    <string name="listview_fold">Fold</string>
+    <string name="listview_translate_left">Translate (left)</string>
+    <string name="listview_translate_right">Translate (right)</string>
+
+    <!-- ListView interpolator -->
+    <string name="listview_interpolator_title">ListView interpolator</string>
+    <string name="listview_accelerate_interpolator">Accelerate</string>
+    <string name="listview_decelerate_interpolator">Decelerate</string>
+    <string name="listview_accelerate_decelerate_interpolator">Accelerate and decelerate</string>
+    <string name="listview_anticipate_interpolator">Anticipate</string>
+    <string name="listview_overshoot_interpolator">Overshoot</string>
+    <string name="listview_anticipate_overshoot_interpolator">Anticipate and overshoot</string>
+    <string name="listview_bounce_interpolator">Bounce</string>
+	
+    <!-- Scrolling Cache -->
+    <string name="pref_scrollingcache_title">Scrolling cache</string>
+    <string name="pref_scrollingcache_summary">Scrolling cache may improve scrolling performance at the cost of memory</string>
+    <string name="pref_scrollingcache_force_enable">Force enable</string>
+    <string name="pref_scrollingcache_default_enable">Default enable</string>
+    <string name="pref_scrollingcache_default_disable">Default disable</string>
+    <string name="pref_scrollingcache_force_disable">Force disable</string>
+
+    <!-- Three-fingers-swipe to screenshot -->
+    <string name="three_finger_gesture">Three finger gesture</string>
+    <string name="three_finger_gesture_summary">Swipe three finger to screenshot</string>
+	
+    <!-- Volume Steps -->
+    <string name="volume_steps_title">Volume steps</string>
+    <string name="volume_steps_alarm_title">Volume steps: Alarm</string>
+    <string name="volume_steps_dtmf_title">Volume steps: DTMF</string>
+    <string name="volume_steps_music_title">Volume steps: Music</string>
+    <string name="volume_steps_notification_title">Volume steps: Notification</string>
+    <string name="volume_steps_ring_title">Volume steps: Ringer</string>
+    <string name="volume_steps_system_title">Volume steps: System</string>
+    <string name="volume_steps_voice_call_title">Volume steps: Voice Call</string>
+    <string name="volume_steps_reset">Reset</string>
+    <string name="volume_steps_60">60</string>
+    <string name="volume_steps_45">45</string>
+    <string name="volume_steps_30">30</string>
+    <string name="volume_steps_15">15</string>
+    <string name="volume_steps_7">7</string>
+    <string name="volume_steps_5">5</string>
+	
+    <!-- Force expanded notifications -->
+    <string name="force_expanded_notifications_title">Force Expanded Notifications</string>
+    <string name="force_expanded_notifications_summary">Available only for apps that support expanded notifications</string>
+	
+    <!-- Disabling immersive mode messages -->
+    <string name="disable_immersive_message_title">Disable Immersive Mode Messages</string>
+    <string name="disable_immersive_message_summary">This will hide all Immersive Mode Messages</string>
+
+    <!-- Lockscreen notif count -->
+    <string name="lockscreen_maxnotif_title">Lockscreen notification count</string>
+    <string name="lockscreen_maxnotif_sumary">Enable adjustment of max lockscreen notifications</string>
+    <string name="lockscreen_maxnotif_config">Max lockscreen notifications</string>
+	
+    <!-- Lock Clock Fonts -->
+    <string name="lock_clock_font_title">Lock Clock Fonts</string>
+    <string name="lock_clock_font_summary">Change the default font of the lockscreen clock widget</string>
+    <string name="lock_clock_font_dialog_title">Select lock clock font</string>
+    <string name="lock_clock_font_stock">Normal (default)</string>
+    <string name="lock_clock_font_bold">Bold</string>
+    <string name="lock_clock_font_italic">Italic</string>
+    <string name="lock_clock_font_bold_italic">Bold Italic</string>
+    <string name="lock_clock_font_light_italic">Light Italic</string>
+    <string name="lock_clock_font_thin_italic">Thin Italic</string>
+    <string name="lock_clock_font_condensed_normal">Condensed</string>
+    <string name="lock_clock_font_condensed_italic">Condensed Italic</string>
+    <string name="lock_clock_font_condensed_bold">Condensed Bold</string>
+    <string name="lock_clock_font_condensed_bold_italic">Condensed Bold Italic</string>
+    <string name="lock_clock_font_medium_normal">Medium</string>
+    <string name="lock_clock_font_medium_italic">Medium Italic</string>
+	
+	<!-- StatusBar Settings -->
+	<string name="kdp_status_bar_settings_cat">StatusBar Customization</string>
+	<string name="kdp_status_bar_settings_title">Hexa StatusBar Settings</string>
+	
+	<!-- Animation Settings -->
+	<string name="kdp_anim_category_title">Animation Customization</string>
+	<string name="kdp_anim_settings_title">Hexa Animation Settings</string>
+	
+	<!-- Locscreen Settings -->
+	<string name="kdp_lockscreen_settings_category_title">Lockscreen Customization</string>
+	<string name="hexa_lockscreen_settings">Hexa Lockscreen Settings</string>
+	
+	<!-- Other Settings -->
+	<string name="kdp_other_settings_category_title">Other Customization</string>
+	<string name="kdp_other_settings_pref_title">Other Hexa Settings </string>
+	
+    <!-- Status bar - Clock -->
+    <string name="status_bar_clock_style_title">Clock style</string>
+    <string name="status_bar_clock_style_right">Right</string>
+    <string name="status_bar_clock_style_left">Left</string>
+    <string name="status_bar_clock_style_center">Center</string>
+    <string name="status_bar_clock_style_hidden">Hidden</string>
+
+    <string name="status_bar_am_pm_title">AM/PM style</string>
+    <string name="status_bar_am_pm_info">24-hour clock is enabled</string>
+    <string name="status_bar_am_pm_normal">Normal</string>
+    <string name="status_bar_am_pm_small">Small</string>
+    <string name="status_bar_am_pm_hidden">Hidden (default)</string>
+	
+	<!-- Main Clock Category -->
+	<string name="kdp_main_clock_cat_title">Main Clock Customization</string>
+	<string name="kdp_clock_font_category_title">Clock Font Customization</string>
+	<!-- Main Date Category -->
+	<string name="kdp_date_category_title">Date Customization</string>
+	
+	<!-- Toast Category -->
+	<string name="kdp_toast_category_title">Toast Animation Customization</string>
+	<!-- ListPreference Category -->
+	<string name="kdp_listpreference_category_title">ListPreference Animation Customization</string>
+	<!-- Other Animation Category -->
+	<string name="kdp_other_anim_title">Other Animation Customization</string>
+	
+	<!-- Main Carrier Customization -->
+	<string name="kdp_main_carrier_title">Main Carrier Customization</string>
+	<!-- Advanced Carrier Customization -->
+	<string name="kdp_advanced_carrier_title">Advanced Carrier Customization</string>
+	
+	<!-- Lock Clock Fonts Category -->
+	<string name="kdp_lockscreen_clock_fonts_title">Lockscreen Fonts Customization</string>
+	<!-- Lockscreen Notfication Category -->
+	<string name="kdp_lockscreen_notification_title">Lockscreen Notification Customization</string>
+	<!-- Lockscreen Shortcut Category -->
+	<string name="kdp_lockscreen_shortcut_title">Lockscreen Shortcut Customization</string>
+	
+	<!-- Main StatusBar Category -->
+	<string name="kdp_main_status_bar_settings_title">Main StatusBar Customization</string>
+	<!-- Clock and Date Settings Category -->
+	<string name="kdp_clock_date_settings_title">Clock &amp; Date Customiaztion</string>
+	<!-- Other StatusBar Category -->
+	<string name="kdp_other_status_bar_settings_title">Other StatusBar Customization</string>
+	
+    <!-- Flashlight notification -->
+	<string name="kdp_flash_light_notification_title">FlaashLight Notification Customization</string>
+    <string name="flashlight_notification_title">Flashlight notification</string>
+    <string name="flashlight_notification_summary">Enable notification for when the flashlight is on</string>
+	
+	<!-- Gesture Anywhere Category -->
+	<string name="kdp_gesture_anywhere">Gesture Anywhere Customization</string>
+
+	<!-- KangDroid Recents Settings -->
+	<string name="kdp_recents_settings_category_title">Recents Customization</string>
+	<string name="kdp_recents_settings_title">Hexa Recents Settings</string>
+	
+    <!-- Immersive Recents -->
+    <string name="immersive_recents_title">Immersive Recents</string>
+    <string name="immersive_recents_summary">Change the view of the recents screen</string>
+    <string name="immersive_recents_dialog_title">Select recents view</string>
+    <string name="immersive_recents_default">Default</string>
+    <string name="immersive_recents_fullscreen">Fullscreen</string>
+    <string name="immersive_recents_statusbar">Statusbar only</string>
+    <string name="immersive_recents_navbar">Navbar only</string>
+	
+	<!-- Quick Settings category -->
+	<string name="kdp_quick_settings_category_title">Quick Settings Customizations</string>
+	<string name="kdp_quick_settings_title">Hexa QS Settings </string>
+	
+    <!-- Tiles animation style  -->
+    <string name="quicksettings_tiles_category">Tile animation options</string>
+    <string name="qs_tile_animation_style_title">Tiles animation style</string>
+    <string name="qs_tile_animation_duration_title">Tiles animation duration</string>
+    <string name="qs_tile_animation_interpolator_title">Tiles animation interpolator</string>
+    <string name="qs_tile_animation_style_off">No animation</string>
+    <string name="qs_tile_animation_style_flip">Flip</string>
+    <string name="qs_tile_animation_style_rotate">Rotate</string>
+    <string name="qs_tile_animation_duration_low">Low</string>
+    <string name="qs_tile_animation_duration_default">Default</string>
+    <string name="qs_tile_animation_duration_fast">Fast</string>
+    <string name="qs_tile_animation_interpolator_linearInterpolator">Linear</string>
+    <string name="qs_tile_animation_interpolator_accelerateInterpolator">Accelerate</string>
+    <string name="qs_tile_animation_interpolator_decelerateInterpolator">Decelerate</string>
+    <string name="qs_tile_animation_interpolator_accelerateDecelerateInterpolator">Accelerate decelerate</string>
+    <string name="qs_tile_animation_interpolator_bounceInterpolator">Bounce</string>
+    <string name="qs_tile_animation_interpolator_overshootInterpolator">Overshoot</string>
+    <string name="qs_tile_animation_interpolator_anticipateInterpolator">Anticipate</string>
+    <string name="qs_tile_animation_interpolator_anticipateOvershootInterpolator">Anticipate overshoot</string>
+    <string name="qs_set_animation_style">%1$s</string>
+    <string name="qs_set_animation_duration">%1$s</string>
+    <string name="qs_set_animation_interpolator">%1$s</string>
+	
+	<!-- Tiles Animation Category -->
+	<string name="kdp_qs_animation_category_title">QS Animation</string>
+
+    <!-- QuickSettings haptic feedback -->
+    <string name="quick_settings_vibrate_title">Vibrate on touch</string>
+    <string name="quick_settings_vibrate_summary">Vibrate when touching tiles</string>
+	
+    <!-- Advanced data tile -->
+    <string name="qs_advanced_data_title">Advanced data tile</string>
+    <string name="qs_advanced_data_summary">Enable one tap action to enable or disable data</string>
+	
+    <!-- Quick Settings brightness slider -->
+    <string name="qs_brightness_slider_title">Brightness slider</string>
+    <string name="qs_brightness_slider_summary">Show a brightness slider in the quick settings panel</string>
+
+    <string name="brightness_icon_title">Brightness icon </string>
+    <string name="brightness_icon_summary">Show a brightness icon to the left of the brighness slider to adjust auto-brightness</string>
+	
+    <!-- Quick settings tiles columns and rows config -->
+    <string name="qs_layout_category">QS tiles layout</string>
+    <string name="qs_rows_portrait_title">Rows (portrait)</string>
+    <string name="qs_rows_landscape_title">Rows (landscape)</string>
+    <string name="qs_columns_title">Columns</string>
+	<string name="sysui_qqs_count_title">Small QS tiles</string>
+
+	<!-- HexaProject Information -->
+	<string name="kdp_device_info_title">Hexa-Project Info</string>
+	<string name="kdp_device_info_summary">See information of Hexa-Project</string>
+	<string name="kdp_kangdroid_title">Hexa-Project Information</string>
+	<string name="kdp_device_hardware_info_title">Device Hardware Information</string>
+	<string name="kdp_cyanogenmod_info_title">CyanogenMod Information</string>
+	<string name="kdp_update_title">Update Hexa-Project</string>
+	
+	<!-- From CMParts -->
+    <string name="status_bar_toggle_brightness">Brightness control</string>
+    <string name="status_bar_toggle_brightness_summary">Adjust brightness by sliding across the status bar</string>
+    <string name="status_bar_notif_count_title">Show notification count</string>
+    <string name="status_bar_notif_count_summary">Display the number of pending notifications</string>
+    <string name="status_bar_quick_qs_pulldown_title">Quick pulldown</string>
+    <string name="status_bar_quick_qs_pulldown_summary">%1$s edge of the status bar pulls down Quick Settings</string>
+    <string name="status_bar_quick_qs_pulldown_summary_left">Left</string>
+    <string name="status_bar_quick_qs_pulldown_summary_right">Right</string>
+    <string name="status_bar_quick_qs_pulldown_off">Off</string>
+    <string name="status_bar_quick_qs_pulldown_left">Left</string>
+    <string name="status_bar_quick_qs_pulldown_right">Right</string>
+	 
+     <!-- Navigation Bar -->
+     <string name="navbar_interface_title">Interface</string>
+     <string name="navbar_size">Bar size</string>
+     <string name="navbar_mode">Navigation mode</string>
+     <string name="navbar_visibility">Enable navigation bar</string>
+     <string name="navigationbar_settings_title">Navigation</string>
+     <string name="aosp_navigation_bar">Navigation bar</string>
+     <string name="aosp_navigation_bar_settings">Navigation bar settings</string>
+     <string name="navigationbar_settings_summary">Customize navigation style and behavior</string>
+     <string name="navbar_general_title">Advanced</string>
+     <string name="navigation_bar_left_title">Left-handed mode</string>
+     <string name="navigation_bar_left_summary">Place the navigation bar on the left side of the screen in landscape mode</string>
+     <string name="info_pref_note_title">Note</string>
+     <string name="smartbar_interface">SmartBar</string>
+     <string name="icon_pack_picker_dialog_title">Icon packs</string>
+ 
+     <!-- Actions dialog and default task values set in ActionPreference xml-->
+     <string name="choose_action_title">Choose action</string>
+     <string name="action_entry_default_action">Default settings</string>
+     <string name="action_entry_select_app">Select application</string>
+     <string name="action_entry_custom_action">Select custom action</string>
+     <string name="action_value_default_action">action_default</string>
+     <string name="action_value_select_app">action_app</string>
+     <string name="action_value_custom_action">action_custom</string>
+ 
+     <string name="action_value_default_action">default</string>
+     <string name="action_value_select_app">app</string>
+     <string name="action_value_back">task_back</string>
+     <string name="action_value_home">task_home</string>
+     <string name="action_value_search_assist">task_assist</string>
+     <string name="action_value_recent_apps">task_recents</string>
+     <string name="action_value_voice_search">task_voice_search</string>
+     <string name="action_value_menu">task_menu</string>
+ 
+     <!-- Fling -->
+     <string name="fling_settings">Fling settings</string>
+     <string name="fling_interface">Fling gesture interface</string>
+     <string name="fling_enable_title">Enable Fling</string>
+     <string name="fling_back_home_policy">Back and Home are required to be set at all times. To change a Back or Home assignment, set the desired assignment first</string>
+     <string name="fling_split_bar_policy">When only a right or left action is assigned, the action applies to the full bar</string>
+     <string name="fling_def_summary">No action set</string>
+     <string name="fling_swipe_actions">Swipe gestures</string>
+     <string name="fling_tap_actions">Tap gestures</string>
+     <string name="fling_short_swipe_right">Right short swipe</string>
+     <string name="fling_short_swipe_left">Left short swipe</string>
+     <string name="fling_long_swipe_right">Right long swipe</string>
+     <string name="fling_long_swipe_left">Left long swipe</string>
+	 <string name="fling_right_up_swipe">Right side swipe up</string>
+     <string name="fling_left_up_swipe">Left side swipe up</string>
+     <string name="fling_single_tap">Single tap right</string>
+     <string name="fling_double_tap">Double tap right</string>
+     <string name="fling_long_press">Long press right</string>
+     <string name="fling_single_left_tap">Single tap left</string>
+     <string name="fling_double_left_tap">Double tap left</string>
+     <string name="fling_long_left_press">Long press left</string>
+     <string name="long_swipe_portrait_title">Portrait</string>
+     <string name="long_swipe_landscape_title">Landscape</string>
+     <string name="right_swipe_title">Right swipe</string>
+     <string name="left_swipe_title">Left swipe</string>
+     <string name="up_swipe_title">Up swipe</string>
+     <string name="down_swipe_title">Down swipe</string>
+     <string name="long_swipe_reset">Reset</string>
+     <string name="fling_advanced">Advanced</string>
+     <string name="fling_long_swipe_title">Long swipe threshold</string>
+     <string name="fling_long_swipe_summary">Fine tune long swipe thresholds based on a percentage of Fling interface width or height</string>
+     <string name="fling_trails_enable_title">Enable gesture trails</string>
+     <string name="fling_trails_enable_summary">Show a trail on swipe gestures</string>
+     <string name="fling_trails_color_title">Trail color</string>
+     <string name="fling_appearance">Appearance</string>
+     <string name="fling_show_logo_title">Show Fling logo</string>
+     <string name="fling_animate_logo_title">Animate logo</string>
+     <string name="fling_animate_logo_summary">Logo animates on touch events</string>
+     <string name="fling_logo_color">Logo color</string>
+     <string name="fling_logo_custom_logo_pick_title">Custom logo icon</string>
+	 <string name="fling_logo_custom_logo_image_pick_title">Custom logo image</string>
+     <string name="fling_logo_custom_logo_reset_title">Reset logo icon</string>
+     <string name="fling_show_ripple_title">Show ripple</string>
+     <string name="fling_show_ripple_summary">Ripple effect on touch events</string>
+     <string name="fling_ripple_color">Ripple color</string>
+     <string name="fling_longpress_timeout_label_left">Less delay</string>
+     <string name="fling_longpress_timeout_label_right">More delay</string>
+     <string name="fling_longpress_title">Long press delay</string>
+     <string name="fling_longpress_summary">Increase or decrease the time it takes to execute a long press</string>
+     
+     <!-- Pulse navigation bar music visualizer -->
+     <string name="pulse_help_policy_notice_title">About Pulse</string>
+     <string name="pulse_help_policy_notice_summary">Pulse is a brilliant audio graphic equalizer on the navigation bar when music plays. Pulse does not work with some audio sources when listening on device speaker</string>
+     <string name="pulse_settings">Pulse</string>
+     <string name="pulse_settings_summary">Navigation bar audio graphic equalizer</string>
+     <string name="fling_show_pulse_title">Show Pulse</string>
+     <string name="fling_show_pulse_summary">Audio graphic equalizer on the navigation bar</string>
+     <string name="pulse_render_mode_title">Render mode</string>
+     <string name="pulse_render_mode_fading_bars">Fading blocks</string>
+     <string name="pulse_render_mode_solid_lines">Solid lines</string>
+     <string name="fling_pulse_color">Pulse color</string>
+     <string name="eos_fling_lavalamp_title">Turn on Lava Lamp</string>
+     <string name="eos_fling_lavalamp_summary">Pulse animates a smooth lava lamp style color blend</string>
+     <string name="pulse_advanced_category">Advanced</string>
+     <string name="pulse_legacy_mode_advanced_category">Fading blocks mode settings</string>
+	 
+	<string name="pulse_custom_dimen">Pulse Bar Width</string>
+	
+	<string name="pulse_custom_div">Pulse Bar Spacing</string>
+	<string name="default_div">Default</string>
+	<string name="pulse_custom_dimen_cat">Adjust The Dimensions of The Pulse bars in Visualizer with Custom Dimension Changer. Also Adjust The Spacing Between Them</string>
+	<string name="pulse_block_category">Pulse Blocks</string>
+	<string name="pulse_custom_dimen_category">Pulse Bar Dimensions</string>
+	<string name="pulse_block_category_title">Pulse Block Size</string>
+	<string name="pulse_block_category_summary">Adjust The Size of Pulse Visualizer Blocks and Spacing Each Block</string>
+	<string name="pulse_aggression">Power</string>
+	<string name="pulse_aggression_category">Adjust The Agression for Pulse Visualizer. Relaxed Being Smallest and Insanse Being Most Agressive</string>
+	<string name="pulse_filled_block_size">Block Size</string>
+	<string name="pulse_empty_block_size">Block Spacing</string>
+	<string name="pulse_custom_fudge_factor">Visualizer Sanity Level</string>
+	<string name="pulse_solid_fudge_factor">Sanity Level</string>
+	<string name="lavamp_solid_speed_title">LavaLamp Animation Speed</string>
+	<string name="pulse_solid_dimen_category">Solid Lines Customizations</string>
+ 
+     <!-- Navbar height -->
+     <string name="navigation_bar_size_title">Bar size</string>
+     <string name="portrait_title">Portrait height</string>
+     <string name="land_vert_title">Landscape width</string>
+     <string name="land_hor_title">Landscape height</string>
+     <string name="positive_done">Done</string>
+     
+      <!-- SmartBar -->
+    <string name="smartbar_category">Smartbar</string>
+    <string name="smartbar_settings_title">Smartbar settings</string>
+    <string name="smartbar_editor_title">Toggle button editor</string>
+    <string name="smartbar_editor_summary">Medium press and drag to change position. Long press to show edit menu. Button position may be changed while menu is showing.</string>
+    <string name="smartbar_context_menu_position_title">Context buttons layout position</string>
+    <string name="smartbar_context_menu_position_summary">Set the position of contextual buttons such as menu and ime selector</string>
+    <string name="smartbar_right">Right</string>
+    <string name="smartbar_left">Left</string>
+    <string name="smartbar_button_animation_title">Button touch animation</string>
+    <string name="smartbar_button_animation_summary">Set the animation style of the primary buttons when they are pressed</string>
+    <string name="smartbar_button_animation_ripple">Ripple</string>
+    <string name="smartbar_button_animation_spring">Spring</string>
+	<string name="qs_tile_animation_style_flip">Flip</string>
+	<string name="smartbar_factory_reset_title">Reset to stock</string>
+    <string name="smartbar_factory_reset_confirm">Are you sure you want to reset Smartbar to stock settings?</string>
+     <string name="smartbar_ime_action_title">Input method actions</string>
+     <string name="smartbar_ime_action_summary">Set what buttons to show when a on-screen keyboard is showing</string>
+     <string name="smartbar_ime_action_none">None</string>
+     <string name="smartbar_ime_action_arrows">Input arrows</string>
+     <string name="smartbar_ime_action_switcher">Keyboard switcher</string>
+	<string name="navbar_tint_switch">Navigation Button Tint</string>
+	<string name="navbar_button_color">Navigation Bar Buttons</string>
+	
+  	<string name="smartbar_backup_current_config_title">Save profile</string>
+   	<string name="smartbar_restore_config_title">Restore profile</string>
+        <string name="smartbar_config_name_edit_dialog_title">Smartbar profile name</string>
+        <string name="smartbar_config_name_edit_dialog_message">Enter name or leave blank</string>
+	<string name="smartbar_config_dialog_title">Smartbar profiles</string>
+	<string name="smartbar_config_backup_success_toast">Smartbar profile successfully saved</string>
+        <string name="smartbar_config_restore_success_toast">Smartbar profile successfully restored</string>
+        <string name="smartbar_config_backup_error_toast">Error saving Smartbar profile</string>
+        <string name="smartbar_config_restore_error_toast">Error restoring Smartbar profile</string>
+		
+        <!-- Navbar buttons transparency -->
+        <string name="navbar_buttons_alpha_title">Buttons transparency</string>
+
+    <!-- Status bar - Clock -->
+    <string name="status_bar_clock_style_title">Clock style</string>
+    <string name="status_bar_clock_style_right">Right</string>
+    <string name="status_bar_clock_style_left">Left</string>
+    <string name="status_bar_clock_style_center">Center</string>
+    <string name="status_bar_clock_style_hidden">Hidden</string>
+
+    <string name="status_bar_am_pm_title">AM/PM style</string>
+    <string name="status_bar_am_pm_info">24-hour clock is enabled</string>
+    <string name="status_bar_am_pm_normal">Normal</string>
+    <string name="status_bar_am_pm_small">Small</string>
+    <string name="status_bar_am_pm_hidden">Hidden</string>
+
+    <!-- Status bar - Battery -->
+    <string name="status_bar_battery_style_title">Battery status style</string>
+    <string name="status_bar_battery_style_icon_portrait">Icon portrait</string>
+    <string name="status_bar_battery_style_icon_landscape">Icon landscape</string>
+    <string name="status_bar_battery_style_circle">Circle</string>
+    <string name="status_bar_battery_style_text">Text</string>
+    <string name="status_bar_battery_style_hidden">Hidden</string>
+
+    <!-- Status bar - Battery percentage -->
+    <string name="status_bar_battery_percentage_title">Battery percentage</string>
+    <string name="status_bar_battery_percentage_default">Hidden</string>
+    <string name="status_bar_battery_percentage_text_inside">Inside the icon</string>
+    <string name="status_bar_battery_percentage_text_next">Next to the icon</string>
+
+    <!-- Status bar - icon blacklist -->
+    <string name="status_bar_icons_title">Status bar icons</string>
+    <string name="status_bar_icons_summary">Control which status bar icons are shown</string>
+
+    <!-- Status bar - double tap to sleep -->
+    <string name="status_bar_double_tap_to_sleep_title">Double-tap to sleep</string>
+    <string name="status_bar_double_tap_to_sleep_summary">Double-tap on the status bar to turn off the display</string>
+	
+    <!-- Status bar - icon blacklist -->
+    <string name="status_bar_icons_title">Status bar icons</string>
+    <string name="status_bar_icons_summary">Control which status bar icons are shown</string>
+	
+    <string name="status_bar_show_weather_title">Show weather</string>
+    <string name="status_bar_show_weather_summary">Display the current temperature on the status bar</string>
+	
+	<!-- StatusBar Battery category -->
+	<string name="status_bar_battery_cus_title">Battery Customization</string>
+	
+    <!-- Buttons - Enable navbar -->
+    <string name="disable_navkeys_title">Enable on-screen nav bar</string>
+    <string name="disable_navkeys_summary">Enable on-screen navigation bar and disable hardware buttons</string>
+
+    <!-- Navigation Bar -->
+	<string name="hardware_keys_action_nothing">No action</string>
+    <string name="hardware_keys_action_nothing">No action</string>
+    <string name="hardware_keys_action_menu">Open/close menu</string>
+    <string name="hardware_keys_action_app_switch">Recent apps switcher</string>
+    <string name="hardware_keys_action_search">Search assistant</string>
+    <string name="hardware_keys_action_voice_search">Voice search</string>
+    <string name="hardware_keys_action_in_app_search">In-app search</string>
+    <string name="hardware_keys_action_launch_camera">Launch camera</string>
+    <string name="hardware_keys_action_sleep">Turn screen off</string>
+    <string name="hardware_keys_action_last_app">Last app</string>
+    <string name="hardware_keys_action_split_screen">Split screen</string>
+	<string name="nav_bar_settigs_hexa">NavigationBar Customizations</string>
+	<string name="nav_bar_settings_hexa_screen">NavigationBar Settings</string>
+    <string name="navigation_bar_category">Navigation bar</string>
+    <string name="navigation_bar_title">Buttons and layout</string>
+    <string name="navigation_bar_left_title">Left-handed mode</string>
+    <string name="navigation_bar_left_summary">Place the navigation bar on the left side of the screen in landscape mode</string>
+    <string name="navigation_bar_arrow_keys_title">Show arrow keys while typing</string>
+    <string name="navigation_bar_arrow_keys_summary">Display left and right cursor buttons while typing. Overrides IME switcher.</string>
+    <string name="navigation_bar_home_long_press_title">Home long press action</string>
+    <string name="navigation_bar_home_double_tap_title">Home double tap action</string>
+    <string name="navigation_bar_recents_title">Recents long press action</string>
+	
+	<!-- NavBar Category -->
+	<string name="kdp_main_nav_bar_title">Main NavBar Customization</string>
+	<string name="kdp_advanced_nav_bar_title">Other NavBar Customization</string>
+	<string name="kdp_size_nav_bar_title">NavBar Dimension Customizatoin</string>
+	
+    <!-- Allow fake signature -->
+    <string name="allow_signature_fake">Allow signature spoofing</string>
+    <string name="allow_signature_fake_summary">Allow apps to bypass security systems by pretending to be a different app.</string>
+	
+    <!-- Battery Bar -->
+    <string name="battery_bar_title">Battery bar</string>
+    <string name="battery_bar">Battery bar location</string>
+    <string name="battery_bar_no_navbar">Battery bar location</string>
+    <string name="battery_bar_color">Battery bar color</string>
+    <string name="battery_bar_charging_color">Battery bar charging color</string>
+    <string name="battery_bar_battery_low_color">Battery bar low battery color</string>
+    <string name="battery_bar_cat">Battery bar style</string>
+    <string name="battery_bar_style_title">Battery bar alignment</string>
+    <string name="battery_bar_thickness_title">Battery bar thickness</string>
+    <string name="battery_bar_animate_title">Charging animation</string>
+    <string name="battery_bar_style_regular">Regular</string>
+    <string name="battery_bar_style_center_mirrored">Center-mirrored</string>
+    <string name="battery_bar_style_reversed">Reversed</string>
+    <string name="battery_bar_use_charging_color">Custom charging color</string>
+    <string name="battery_bar_blend_color_title">Blend colors</string>
+    <string name="battery_bar_blend_color_summary">Blend full/empty colors corresponding to battery percentage</string>
+    <string name="battery_bar_blend_color_reverse_title">Reverse color direction</string>
+    <string name="battery_bar_blend_color_reverse_summary_off">Full &#8594; empty: red &#8592; green &#8592; blue &#8592; red</string>
+    <string name="battery_bar_blend_color_reverse_summary_on">Full &#8594; empty: red &#8594; green &#8594; blue &#8594; red</string>
+	
+    <!-- Status Bar Ticker -->
+   <string name="ticker_screen_title">Ticker</string>
+   <string name="ticker_title">Status Bar Ticker</string>
+   <string name="ticker_screen_summary">Customize the ticker style</string>
+   <string name="ticker_summary">Enable the status bar ticker</string>
+   <string name="ticker_restore_defaults_title">Restore defaults</string>
+   <string name="text_title">Text</string>
+   <string name="icon_title">Icon</string>
+   <string name="colors_title">Colors</string>
+   <string name="values_restored_title">Values restored</string>
+   
+    <!-- PA Pie control -->
+     <string name="pa_piecontrol_settings_summary">Customize Pie targets, sytle, size and color</string>
+     <string name="pa_pie_control_title">Pie Control</string>
+     <string name="pa_pie_control_enable_title">Enable Pie Control</string>
+     <string name="pa_pie_targets_title">Pie Targets</string>
+     <string name="pa_pie_style_title">Pie Style</string>
+     <string name="pa_pie_menu_title">Always show menu button</string>
+     <string name="pa_pie_menu_summary">Whether or not the menu button should always be shown, even when its not needed</string>
+     <string name="pa_pie_size_title">Pie Size</string>
+     <string name="pa_pie_size_summary">Define Pie controls size</string>
+     <string name="pa_pie_size_small">Small</string>
+     <string name="pa_pie_size_default">@string/pa_pie_mode_default</string>
+     <string name="pa_pie_size_large">Large</string>
+     <string name="pa_pie_size_gigantic">Gigantic</string>
+     <string name="pa_pie_size_monster">Monster</string>
+     <string name="pa_pie_size_enormous">Enormous</string>
+     <string name="pa_pie_mode_default">Default</string>
+     <string name="pa_pie_gravity_title">Pie Gravity</string>
+     <string name="pa_pie_gravity_summary">Select the location where the Pie will be placed</string>
+     <string name="pa_pie_gravity_bottom">Bottom</string>
+     <string name="pa_pie_gravity_right">Right</string>
+     <string name="pa_pie_gravity_left">Left</string>
+     <string name="pa_pie_gap_title">Item gap</string>
+     <string name="pa_pie_gap_summary">Adjust the gap that separates the Pie elements</string>
+     <string name="pa_pie_angle_title">Pie Angle</string>
+     <string name="pa_pie_angle_summary">Adjust the angle of pie\'s egdes from the attachment</string>
+     <string name="pa_pie_angle_none">None (old)</string>
+     <string name="pa_pie_angle_small">Small</string>
+     <string name="pa_pie_angle_big">Normal (default)</string>
+     <string name="pa_pie_angle_huge">Big</string>
+     <string name="pa_pie_angle_super">Huge</string>
+     <string name="pa_pie_gap_none">None</string>
+     <string name="pa_pie_gap_small">Small</string>
+     <string name="pa_pie_gap_big">Big (default)</string>
+     <string name="pa_pie_gap_huge">Huge</string>
+     <string name="pa_pie_mode_title">Pie Style</string>
+     <string name="pa_pie_mode_summary">Manage how animations and status additions will be handled</string>
+     <string name="pa_pie_mode_bare">Bare</string>
+     <string name="pa_pie_mode_quick">Quick</string>
+     <string name="pa_pie_mode_default">Default</string>
+     <string name="pa_pie_mode_slow">Slow</string>
+     <string name="pa_pie_lastapp_title">Last App</string>
+     <string name="pa_pie_lastapp_summary">Enable last app button</string>
+     <string name="pa_pie_killtask_title">Kill Task</string>
+     <string name="pa_pie_killtask_summary">Enable kill task button</string>
+     <string name="pa_pie_notifications_title">Notifications</string>
+     <string name="pa_pie_notifications_summary">Enable notifications button</string>
+     <string name="pa_pie_settings_panel_title">Quick Settings Panel</string>
+     <string name="pa_pie_settings_panel_summary">Enable expand quick settings panel button</string>
+     <string name="pa_pie_screenshot_title">Screenshot</string>
+     <string name="pa_pie_screenshot_summary">Enable screenshot button</string>
+     <string name="pa_pie_color_title">Pie Color Settings</string>
+     <string name="pa_pie_color_style_title">Pie Color Style</string>
+     <string name="pa_pie_background_title">Background Color</string>
+     <string name="pa_pie_select_title">Selection Color</string>
+     <string name="pa_pie_outlines_title">Outlines Color</string>
+     <string name="pa_pie_status_clock_title">Clock Color</string>
+     <string name="pa_pie_status_title">Status Color</string>
+     <string name="pa_pie_chevron_title">Chevron Color</string>
+     <string name="pa_pie_juice_title">Battery Juice Color</string>
+     <string name="pa_pie_button_color">Button Color</string>
+     <string name="pa_pie_button_color_title">Buttons Color</string>
+     <string name="pa_pie_always_right_title">Pie always on the right</string>
+     <string name="pa_pie_always_right_summary">Pie will be always shown on the right while in landscape</string>
+	 
+    <!-- Heads up timeout -->
+    <string name="heads_up_category">Heads up</string>
+    <string name="heads_up_time_out_title">Time out</string>
+    <string name="heads_up_time_out_summary">Peeking notifications will show for <xliff:g id="number">%d</xliff:g> seconds</string>
+    <string name="heads_up_time_out_2sec">2 seconds</string>
+    <string name="heads_up_time_out_4sec">4 seconds</string>
+    <string name="heads_up_time_out_5sec">5 seconds</string>
+    <string name="heads_up_time_out_6sec">6 seconds</string>
+    <string name="heads_up_time_out_8sec">8 seconds</string>
+    <string name="heads_up_time_out_10sec">10 seconds</string>
+	
+    <!-- Heads up snooze -->
+    <string name="heads_up_snooze_title">Snooze timer</string>
+    <string name="heads_up_snooze_summary_one_minute">Swiping up on peeking notifications will snooze heads up from that application for 1 minute</string>
+    <string name="heads_up_snooze_summary">Swiping up on peeking notifications will snooze heads up from that application for <xliff:g id="number">%d</xliff:g> minutes</string>
+    <string name="heads_up_snooze_disabled_summary">Snooze timer is disabled</string>
+    <string name="heads_up_snooze_1min">1 minute</string>
+    <string name="heads_up_snooze_5min">5 minutes</string>
+    <string name="heads_up_snooze_10min">10 minutes</string>
+    <string name="heads_up_snooze_15min">15 minutes</string>
+    <string name="heads_up_snooze_20min">20 minutes</string>
+	
+    <!-- Transparency porn -->
+    <string name="trans">Transparency</string>
+    <string name="vol_dialog">Volume Dialog</string>
+    <string name="qs_transparent_shade">QS shade opacity</string>
+    <string name="qs_stroke_title">QS shade border</string>
+    <string name="qs_stroke_disabled">Disabled</string>
+    <string name="qs_stroke_accent">Accent color</string>
+    <string name="qs_stroke_custom">Custom color</string>
+    <string name="qs_stroke_color_title">QS shade border color</string>
+    <string name="qs_stroke_thickness_title">QS shade border thickness</string>
+    <string name="qs_corner_radius_title">QS shade corner radius</string>
+    <string name="qs_dash_width_title">QS border dash width</string>
+    <string name="qs_dash_gap_title">QS border dash gap</string>
+    <string name="volume_dialog_transparency">Volume dialog opacity</string>
+    <string name="volume_dialog_stroke_title">Volume dialog border</string>
+    <string name="volume_dialog_stroke_disabled">Disabled</string>
+    <string name="volume_dialog_stroke_accent">Accent color</string>
+    <string name="volume_dialog_stroke_custom">Custom color</string>
+    <string name="volume_dialog_stroke_color_title">Volume dialog border color</string>
+    <string name="volume_dialog_stroke_thickness_title">Volume dialog border thickness</string>
+    <string name="volume_dialog_corner_radius_title">Volume dialog corner radius</string>
+    <string name="volume_dialog_dash_width_title">Volume dialog border dash width</string>
+    <string name="volume_dialog_dash_gap_title">Volume dialog border dash gap</string>
+    <string name="power_menu_transparency">Power/reboot menu opacity</string>
+    <string name="power_menu_dialog_dim">Power/reboot dialog dim background amount</string>
+    <string name="soft_restart_required">Soft Restart required to apply changes</string>
+	
+    <!-- QS Header Icons -->
+	<string name="qs_settings_icon_header">QS Header Icons</string>
+    <string name="qs_settings_icon_title">Settings Shortcut</string>
+    <string name="qs_settings_icon_summary">Enable the settings shortcut in the header</string>
+    <string name="qs_settings_expanded_title">Settings Shortcut Expanded</string>
+    <string name="qs_settings_expanded_summary">Only enable the settings shortcut when expanded</string>
+    <string name="qs_edit_title">Edit Icon</string>
+    <string name="qs_edit_summary">Enable the tile edit icon in the header</string>
+    <string name="qs_multiuser_switch_title">MultiUser Switch</string>
+    <string name="qs_multiuser_switch_summary">Enable the MultiUser switch in the header</string>
+    <string name="qs_expand_indicator_title">Expand Indicator</string>
+    <string name="qs_expand_indicator_summary">Enable the expand indicator (^) in the header</string>
+	
+    <!-- Recents Membar -->
+    <string name="systemui_recents_mem_display_title">Show Memory Bar</string>
+    <string name="systemui_recents_mem_display_summary">Enable Disable Ram bar in recent app view</string>
+	
+    <!-- Recents panel settings -->
+    <string name="show_clear_all_recents_button_title">Enable clear all button</string>
+    <string name="show_clear_all_recents_button_summary">Show the clear all button when using recents</string>
+    <string name="recents_clear_all_location_title">Clear all button location</string>
+    <string name="recents_clear_all_location_top_right">Top right</string>
+    <string name="recents_clear_all_location_top_left">Top left</string>
+    <string name="recents_clear_all_location_top_center">Top center</string>
+    <string name="recents_clear_all_location_bottom_right">Bottom right</string>
+    <string name="recents_clear_all_location_bottom_left">Bottom left</string>
+    <string name="recents_clear_all_location_bottom_center">Bottom center</string>
+	
+    <!-- Dynamic Navbar -->
+    <string name="navbar_dynamic_title">Dynamic navbar color</string>
+    <string name="navbar_dynamic_summary">Adapt navbar color to match foreground running app primary color</string>
+    <string name="restart_app_required">Restart respective app to see effect</string>
+
+    <!-- Custom System Animations -->
+	<string name="kdp_system_anim_category_title">Main System Animation</string>
+    <string name="animation_title">Animations</string>  
+    <string name="system_animation_title">System animations</string>
+    <string name="activity_open_title">Activity open animation</string>
+    <string name="activity_close_title">Activity close animation</string>
+    <string name="task_open_title">Task open animation</string>
+    <string name="task_open_behind_title">Task open behind animation</string>
+    <string name="task_close_title">Task close animation</string>
+    <string name="task_move_to_front_title">Move to front animation</string>
+    <string name="task_move_to_back_title">Move to back animation</string>
+    <string name="wallpaper_open_title">Wallpaper open animation</string>
+    <string name="wallpaper_close_title">Wallpaper close animation</string>
+    <string name="wallpaper_intra_open_title">Wallpaper intra open animation</string>
+    <string name="wallpaper_intra_close_title">Wallpaper intra close animation</string>
+    <string name="animation_duration_title">Animation duration</string>
+    <string name="animation_duration_default">Default</string>
+	
+	<!-- Fancy tiles animation -->
+    <string name="qs_fancy_animation_title">Fancy QS animation</string>
+    <string name="qs_fancy_animation_summary">Animate when pulling down the statusbar</string>
+	
+    <!-- XOSP Blur personalizations -->
+    <string name="settings_blur_cat">Blur</string>
+    <string name="blurred_status_bar_expanded_enabled_pref">Blur statusbar background</string>
+    <string name="blurred_status_bar_expanded_enabled_pref_summary">Blur the background when you pull down the status bar</string>
+    <string name="translucent_notifications_pref">Translucent notifications</string>
+    <string name="translucent_notifications_pref_summary">Set the background of notifications translucent</string>
+    <string name="translucent_quick_settings_pref">Blurred quick settings</string>
+    <string name="translucent_quick_settings_pref_summary">Blur the QS tiles and background</string>
+    <string name="transluency_level_universal">Translucency level</string>
+    <string name="blurred_recent_app_enabled_pref">Blurred recent apps</string>
+    <string name="blurred_recent_app_enabled_pref_summary">Blur the background of recent apps window</string>
+    <string name="blur_light_color">Light image color filter</string>
+    <string name="blur_dark_color">Dark image color filter</string>
+    <string name="blur_mixed_color">Mixed image color filter</string>
+    <string name="blur_notice">About blur</string>
+    <string name="blur_notice_summary">Blur personalizations are disabled during keyguard view. Only translucent notifications are enabled.</string>
+    <string name="blur_colors_notice">What are these colors doing?</string>
+    <string name="blur_colors_notice_summary">These colors are the ones tiniting the BlurBackground. Instead of the normal Grey, you can now choose the colors in the way you like.\nThere are three color filters: One used for light backgrounds, one used for Dark backgrounds and one used for light/dark backgrounds.\nSo how these colors work?\nSimple, as the titles say, the Light filter will be used for Lighter backgrounds, Dark filter for dark backgrounds and the mixed filter one will be used for backgrounds not too dark but neither too light.\nThese colors are used for both BlurBackgrounds: StatusBar and RecentsApps window</string>
+    <string name="blur_expstatus_cat">Expanded statusBar </string>
+    <string name="blur_notifications_cat">Notifications</string>
+    <string name="blur_qs_cat">Quick settings</string>
+    <string name="blur_recents_cat">Recent apps</string> 
+    <string name="blur_colors_cat">Blur color filters</string>
+    <string name="blur_notices_cat">Notices</string>
+    <string name="blurred_scale">Blur scale</string>
+    <string name="blurred_scale_summary">Quality of blur image</string>
+    <string name="blurred_radius">Blur radius</string>
+    <string name="blurred_radius_summary">Amount of blur</string>
+    <string name="blur_cat_notice">Notice</string>
+    <string name="blur_cat_notice_summary">Blur personalizations are disabled during keyguard view. Only translucent notifications are enabled.</string>
+    <string name="powermenu_title">Power Menu</string>
+    <string name="quicksettings_title">Quick Settings</string>
+
+</resources>
