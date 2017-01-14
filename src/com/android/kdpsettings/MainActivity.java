@@ -137,6 +137,12 @@ public class MainActivity extends FragmentActivity implements
 					return new KangDroidStatusBarSettings();
 				case 3:
 					return new KangDroidQuickSettings();
+				case 4:
+					return new KangDroidNavBarSettings();
+				case 5:
+					return new KangDroidLockscreenSettings();
+				case 6:
+					return new KangDroidOtherSettings();
 			}
 			// getItem is called to instantiate the fragment for the given page.
 			// Return a DummySectionFragment (defined as a static inner class
@@ -151,8 +157,8 @@ public class MainActivity extends FragmentActivity implements
 
 		@Override
 		public int getCount() {
-			// Show 3 total pages.
-			return 4;
+			// Show 7 total pages.
+			return 7;
 		}
 
 		@Override
@@ -166,6 +172,12 @@ public class MainActivity extends FragmentActivity implements
 					return "StatusBar";
 				case 3:
 					return "Quick Settings";
+				case 4:
+					return "NaviationBar";
+				case 5:
+					return "LockscreenSettings";
+				case 6:
+					return "Others";
 			}
 			return null;
 		}
