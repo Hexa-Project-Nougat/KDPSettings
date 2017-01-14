@@ -100,7 +100,7 @@ public class KangDroidNavBarSettings extends PreferenceFragment implements
     private KangDroidSeekBarPreference mBarWidth;
 	private SwitchPreference mNavbarDynamic;
 	
-	Context context;
+	private Context context;
 	
 	public static final int KEY_MASK_HOME = 0x01;
 
@@ -188,7 +188,7 @@ public class KangDroidNavBarSettings extends PreferenceFragment implements
 
         // Navigation bar recents long press activity needs custom setup
         mNavigationRecentsLongPressAction =
-                initRecentsLongPressAction(KEY_NAVIGATION_RECENTS_LONG_PRESS);
+                initRecentsLongPressAction(KEY_NAVIGATION_RECENTS_LONG_PRESS, null);
 
         final CMHardwareManager hardware = CMHardwareManager.getInstance(getActivity());
 
@@ -256,11 +256,10 @@ public class KangDroidNavBarSettings extends PreferenceFragment implements
         return list;
     }
 
-    private ListPreference initRecentsLongPressAction(String key) {
+    private ListPreference initRecentsLongPressAction(String key, Context context) {
+		final ContentResolver resolver = getActivity().getContentResolver();
         ListPreference list = (ListPreference) getPreferenceScreen().findPreference(key);
-		ContentResolver resolver = getActivity().getContentResolver();
         list.setOnPreferenceChangeListener(this);
-
         // Read the componentName from Settings.Secure, this is the user's prefered setting
         String componentString = CMSettings.Secure.getString(resolver,
                 CMSettings.Secure.RECENTS_LONG_PRESS_ACTIVITY);
@@ -273,9 +272,8 @@ public class KangDroidNavBarSettings extends PreferenceFragment implements
 
         // Dyanamically generate the list array,
         // query PackageManager for all Activites that are registered for ACTION_RECENTS_LONG_PRESS
-        PackageManager pm = context.getPackageManager();
         Intent intent = new Intent(cyanogenmod.content.Intent.ACTION_RECENTS_LONG_PRESS);
-        List<ResolveInfo> recentsActivities = pm.queryIntentActivities(intent,
+        List<ResolveInfo> recentsActivities = getActivity().getPackageManager().queryIntentActivities(intent,
                 PackageManager.MATCH_DEFAULT_ONLY);
         if (recentsActivities.size() == 0) {
             // No entries available, disable
@@ -297,7 +295,7 @@ public class KangDroidNavBarSettings extends PreferenceFragment implements
             try {
                 // Use pm.getApplicationInfo for the label,
                 // we cannot rely on ResolveInfo that comes back from queryIntentActivities.
-                entries[i] = pm.getApplicationInfo(info.activityInfo.packageName, 0).loadLabel(pm);
+                entries[i] = getActivity().getPackageManager().getApplicationInfo(info.activityInfo.packageName, 0).loadLabel(getActivity().getPackageManager());
             } catch (PackageManager.NameNotFoundException e) {
                 Log.e(TAG, "Error package not found: " + info.activityInfo.packageName, e);
                 // Fallback to package name
