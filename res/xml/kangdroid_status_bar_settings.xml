@@ -33,7 +33,7 @@
 
     <PreferenceScreen
             android:key="ticker"
-            android:fragment="com.crdroid.settings.fragments.Ticker"
+            android:fragment="com.android.kdpsettings.fragments.Ticker"
             android:title="@string/ticker_screen_title" />
 		
     <com.android.kdpsettings.CMSystemSettingSwitchPreference
