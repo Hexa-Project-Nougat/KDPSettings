@@ -18,6 +18,8 @@
 	<!-- KDP Default strings -->
 	<string name="hexa_title">Hexa Customizations</string>
     <string name="ok">OK</string>
+	<string name="yes">YES</string>
+	<string name="no">NO</string>
     <string name="loading">Loading\u2026</string>
     <string name="dlg_ok">OK</string>
     <string name="cancel">Cancel</string>

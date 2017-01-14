@@ -70,7 +70,7 @@
 
     <PreferenceScreen
             android:key="batterybar"
-            android:fragment="com.crdroid.settings.fragments.BatteryBar"
+            android:fragment="com.android.kdpsettings.fragments.BatteryBar"
             android:title="@string/battery_bar_title" />
 
     <com.android.kdpsettings.CMSystemSettingListPreference
@@ -100,7 +100,7 @@
     <PreferenceScreen
            android:key="kdp_status_bar_clock_and_date_key"
            android:title="@string/kdp_status_bar_clock_and_date"
-           android:fragment="com.android.settings.kangdroid.KangDroidClockDateSettings" />
+           android:fragment="com.android.kdpsettings.fragments.KangDroidClockDateSettings" />
 		   
    </PreferenceCategory>
    
@@ -111,11 +111,11 @@
       <PreferenceScreen
               android:key="kdp_carrier_label"
               android:title="@string/carrier_options"
-              android:fragment="com.android.settings.kangdroid.KangDroidCarrierLabel" />
+              android:fragment="com.android.kdpsettings.fragments.KangDroidCarrierLabel" />
 		   
        <PreferenceScreen
            android:key="network_traffic_state"
-           android:fragment="com.android.settings.kangdroid.NetworkTraffic"
+           android:fragment="com.android.kdpsettings.fragments.NetworkTraffic"
    		android:summary="@string/network_traffic_summary"
    		android:title="@string/network_traffic_title" />
 
