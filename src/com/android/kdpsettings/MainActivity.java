@@ -33,8 +33,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.android.kdpsettings.R;
-import com.android.kdpsettings.fragments.KangDroidAnimSettings;
-import com.android.kdpsettings.fragments.KangDroidRecentsSettings;
+import com.android.kdpsettings.fragments.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -135,7 +134,9 @@ public class MainActivity extends FragmentActivity implements
 				case 1:
 					return new KangDroidRecentsSettings();
 				case 2:
-					return new KangDroidAnimSettings();
+					return new KangDroidStatusBarSettings();
+				case 3:
+					return new KangDroidQuickSettings();
 			}
 			// getItem is called to instantiate the fragment for the given page.
 			// Return a DummySectionFragment (defined as a static inner class
@@ -151,18 +152,20 @@ public class MainActivity extends FragmentActivity implements
 		@Override
 		public int getCount() {
 			// Show 3 total pages.
-			return 3;
+			return 4;
 		}
 
 		@Override
 		public CharSequence getPageTitle(int position) {
 			switch (position) {
 				case 0:
-					return "NULL";
+					return "Animation";
 				case 1:
-					return "NULL";
+					return "Recents";
 				case 2:
-					return "School Info";
+					return "StatusBar";
+				case 3:
+					return "Quick Settings";
 			}
 			return null;
 		}
