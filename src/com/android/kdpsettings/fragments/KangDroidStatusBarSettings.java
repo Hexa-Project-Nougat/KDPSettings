@@ -60,7 +60,7 @@ public class KangDroidStatusBarSettings extends PreferenceFragment implements Pr
 	private ListPreference mHeadsUpTimeOut;
 	private ListPreference mHeadsUpSnoozeTime;
 	
-	Context context;
+	private Context context;
 	
 	public KangDroidStatusBarSettings() {
 	}
@@ -85,9 +85,8 @@ public class KangDroidStatusBarSettings extends PreferenceFragment implements Pr
 		ContentResolver resolver = getActivity().getContentResolver();
 		
         Resources systemUiResources;
-		PackageManager pm = context.getPackageManager();
         try {
-            systemUiResources = pm.getResourcesForApplication("com.android.systemui");
+            systemUiResources = context.getPackageManager().getResourcesForApplication("com.android.systemui");
         } catch (Exception e) {
             return;
         }

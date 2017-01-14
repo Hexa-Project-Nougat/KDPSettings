@@ -93,7 +93,7 @@ public class KangDroidClockDateSettings extends PreferenceFragment
 	
 	private boolean mCheckPreferences;
 	
-	Context context;
+	private Context context;
 
 	public KangDroidClockDateSettings() {
 	}
@@ -123,9 +123,8 @@ public class KangDroidClockDateSettings extends PreferenceFragment
         ContentResolver resolver = getActivity().getContentResolver();
 		
         Resources systemUiResources;
-		PackageManager pm = context.getPackageManager();
         try {
-            systemUiResources = pm.getResourcesForApplication("com.android.systemui");
+            systemUiResources = context.getPackageManager().getResourcesForApplication("com.android.systemui");
         } catch (Exception e) {
             return null;
         }
